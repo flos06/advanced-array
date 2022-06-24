@@ -17,6 +17,17 @@ console.log(snakeToCamel('APp_ACADEMY_iS_cOol')); // 'AppAcademyIsCool'
 
 function snakeToCamel(str) {
     // Your code here
+    let array = str.split('_')
+
+    let newest = array.map(toCam)
+    newest = newest.join('')
+    console.log(newest)
+    return newest
+}
+
+function toCam(string){
+    let newArray = string[0].toUpperCase() + string.substring(1).toLowerCase()
+    return newArray
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
@@ -25,4 +36,4 @@ try {
     module.exports = snakeToCamel;
 } catch (e) {
     module.exports = null;
-}
+}

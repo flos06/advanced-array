@@ -18,6 +18,36 @@ console.log(hasThreeVowels('go home'));         //  false
 
 let hasThreeVowels = function(string) {
     // Your code here
+    let arr = string.split('')
+
+    let eCount = 0
+    let oCount = 0
+    let uCount = 0
+    let iCount = 0
+    let aCount = 0
+    arr.forEach(char => {
+        if (char == 'o'){
+            oCount = 1
+        }
+        else if (char == 'e'){
+            eCount = 1
+        }
+        else if (char == 'u'){
+            uCount = 1
+        }
+        else if (char == 'i'){
+            iCount = 1
+        }
+        else if (char == 'a'){
+            aCount = 1
+        }
+      });
+      let totalC = aCount + oCount + eCount + uCount + iCount
+   
+      if (totalC >= 3){
+        return true
+      }
+      return false
 };
 
 // Your code here
@@ -28,4 +58,4 @@ try {
     module.exports = hasThreeVowels;
 } catch (e) {
     module.exports = null;
-}
+}

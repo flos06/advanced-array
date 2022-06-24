@@ -17,7 +17,17 @@ console.log(productWithReduce([4, 3])); // 12
 
 let productWithReduce = function(nums) {
     // Your code here
+    const  initial = nums[0]
+    let maxi = nums.reduce((previous, currentValue) => {
+      return previous * currentValue
+
+})
+console.log(maxi)
+return maxi
+
 }
+console.log(productWithReduce([4, 3])); // 12
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
@@ -25,4 +35,4 @@ try {
   module.exports = productWithReduce;
 } catch (e) {
   module.exports = null;
-}
+}

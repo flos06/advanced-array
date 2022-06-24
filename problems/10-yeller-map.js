@@ -14,6 +14,15 @@ console.log(yeller(['kiwi', 'orange', 'mango'])); // [ 'KIWI!', 'ORANGE!', 'MANG
 
 let yeller = function(words) {
   // Your code here
+
+  let newest = words.map((caps) => {
+    let newC = caps
+    newC = newC.toUpperCase() + '!'
+    console.log(newC)
+    return newC
+  })
+  return newest
+
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
@@ -22,4 +31,4 @@ try {
   module.exports = yeller;
 } catch (e) {
   module.exports = null;
-}
+}
