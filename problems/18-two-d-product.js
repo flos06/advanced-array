@@ -26,7 +26,18 @@ console.log(twoDimensionalProduct(arr2)); // 88
 */
 
 let twoDimensionalProduct = function(arr) {
-    // Your code here
+  // Your code here
+
+let merged = arr.reduce((prev, next) =>{
+  return prev.concat(next)
+})
+console.log(merged)
+let multiplied = merged.reduce((prev, next) =>{
+  return prev * next
+})
+console.log(multiplied)
+
+return multiplied
 };
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
